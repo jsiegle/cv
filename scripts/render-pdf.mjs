@@ -56,11 +56,17 @@ server.listen(4173, "127.0.0.1", async () => {
 const targets = [
     {
       url: "http://127.0.0.1:4173/",
-      files: [`${outDir}/highlights.pdf`, `${siteDir}/assets/highlights.pdf`]
+      files: [
+        `${outDir}/Josh Siegle - CV (Highlights).pdf`,
+        `${siteDir}/assets/Josh Siegle - CV (Highlights).pdf`
+      ]
     },
     {
       url: "http://127.0.0.1:4173/complete/",
-      files: [`${outDir}/complete.pdf`, `${siteDir}/assets/complete.pdf`]
+      files: [
+        `${outDir}/Josh Siegle - CV (Complete).pdf`,
+        `${siteDir}/assets/Josh Siegle - CV (Complete).pdf`
+      ]
     }
   ];
 

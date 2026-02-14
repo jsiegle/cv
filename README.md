@@ -8,7 +8,7 @@ This template generates two CV variants from one Markdown source:
 Outputs:
 
 - HTML: `_site/index.html` and `_site/complete/index.html`
-- PDF: `output/highlights.pdf` and `output/complete.pdf`
+- PDF: `output/Josh Siegle - CV (Highlights).pdf` and `output/Josh Siegle - CV (Complete).pdf`
 
 ## Quickstart
 
