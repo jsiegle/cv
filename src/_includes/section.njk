@@ -1,0 +1,21 @@
+{% macro renderSection(heading, entries) %}
+  <section class="section-block{% if heading == 'Publications' or heading == 'Selected Publications' %} publications-section{% endif %}">
+    <h2>{{ heading }}</h2>
+    <ul>
+      {% for entry in entries %}
+        <li>
+          {% if entry.citation %}
+            {% if entry.url %}<a class="pub-link" href="{{ entry.url }}" target="_blank" rel="noreferrer">{{ entry.citation | renderInlineMd | safe }}</a>{% else %}{{ entry.citation | renderInlineMd | safe }}{% endif %}
+          {% elseif entry.item %}
+            {{ entry.item | renderInlineMd | safe }}
+          {% elseif entry.role %}
+            <strong>{{ entry.role }}</strong>, {{ entry.institution }} ({{ entry.dates }})<br />
+            <span class="muted">{{ entry.details | renderInlineMd | safe }}</span>
+          {% elseif entry.degree %}
+            <strong>{{ entry.degree | renderInlineMd | safe }}</strong>, {{ entry.institution | renderInlineMd | safe }} ({{ entry.year }})
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endmacro %}

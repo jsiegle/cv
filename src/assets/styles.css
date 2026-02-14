@@ -1,0 +1,423 @@
+@font-face {
+  font-family: "Geist";
+  src: url("Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("GeistMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono Bold Italic";
+  src: url("GeistMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Geist Bold";
+  src: url("Geist-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist ExtraBold";
+  src: url("Geist-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Extra Bold Italic";
+  src: url("Geist-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+
+:root {
+  --ink: #101214;
+  --paper: #ffffff;
+  --rule: #1c1f23;
+  --muted: #4a5056;
+  --highlight: #7eb8f7;
+  --highlight-soft: #d9eaff;
+  --surface-bg: #ececec;
+  --dot-color: rgba(255, 255, 255, 0.92);
+  --shadow-color: #111111;
+  --pub-hover: #0f2f52;
+}
+
+:root[data-theme="dark"] {
+  --ink: #dddddd;
+  --paper: #20252b;
+  --rule: #9daab8;
+  --muted: #b8c2cc;
+  --highlight: #c5947c;
+  --highlight-soft: #5a4035;
+  --surface-bg: #232323;
+  --dot-color: rgba(255, 255, 255, 0.12);
+  --shadow-color: #060708;
+  --pub-hover: #e3b59f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Geist", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.38;
+  background:
+    radial-gradient(circle at 1px 1px, var(--dot-color) 1px, transparent 0),
+    var(--surface-bg);
+  background-size: 14px 14px, auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+}
+
+strong,
+b {
+  font-family: "Geist Bold", "Geist", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.pub-link {
+  text-decoration: none;
+  background-image: linear-gradient(180deg, transparent 0%, transparent 58%, var(--highlight-soft) 58%, var(--highlight-soft) 100%);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0%;
+  transition: background-size 250ms ease, color 0ms ease;
+}
+
+.pub-link:hover,
+.pub-link:focus-visible {
+  background-size: 100% 100%;
+  color: var(--pub-hover);
+}
+
+.cv-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 0.9rem 2.4rem;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0.4rem 0 0.8rem;
+  background: transparent;
+}
+
+.hero-band {
+  display: none;
+}
+
+.cv-badge-toggle {
+  position: absolute;
+  top: -0.7rem;
+  right: 0;
+  border: none;
+  padding: 0.03rem 0.35rem;
+  margin: 0;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--highlight);
+  background: var(--paper);
+  font-family: "Geist Mono", "SFMono-Regular", Menlo, monospace;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.cv-badge-toggle:hover {
+  color: var(--ink);
+}
+
+.cv-badge-toggle:focus-visible {
+  outline: none;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Geist Extra Bold Italic", "Geist Bold", "Geist", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2.2rem, 8vw, 4.1rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.hero-subtitle {
+  display: inline-block;
+  margin: 0.45rem 0 0.22rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--highlight);
+  font-family: "Geist Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+.hero-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.link-grid a {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Geist Mono", "SFMono-Regular", Menlo, monospace;
+  letter-spacing: 0.09em;
+  font-size: 0.76rem;
+  padding: 0.36rem 0.74rem;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  transition: transform 120ms ease, box-shadow 120ms ease, color 120ms ease;
+}
+
+.link-grid a:hover {
+  box-shadow: 1px 1px 0 var(--shadow-color);
+  transform: translate(2px, 2px);
+  color: var(--highlight);
+}
+
+.version-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.78rem;
+  padding-bottom: 0.5rem;
+}
+
+.version-tabs {
+  display: inline-flex;
+  gap: 0.8rem;
+}
+
+.version-tabs a,
+.pdf-download {
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Geist Mono", "SFMono-Regular", Menlo, monospace;
+  letter-spacing: 0.11em;
+  font-size: 0.75rem;
+  padding: 0.34rem 0.78rem;
+  background: var(--paper);
+  position: relative;
+  isolation: isolate;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  transition: transform 120ms ease, box-shadow 120ms ease, color 120ms ease;
+}
+
+.version-tabs a {
+  min-width: 12ch;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.version-tabs a.is-active {
+  color: #ffffff;
+  background: var(--paper);
+  border-color: var(--rule);
+  box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.version-tabs a.is-active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #7eb8f7 0%, #5b90ca 100%);
+  z-index: -1;
+}
+
+:root[data-theme="dark"] .version-tabs a.is-active::before {
+  background: linear-gradient(135deg, #d6a07e 0%, #b8734f 100%);
+}
+
+.pdf-download {
+  background: var(--highlight-soft);
+}
+
+.version-tabs a:hover,
+.pdf-download:hover {
+  box-shadow: 1px 1px 0 var(--shadow-color);
+  transform: translate(2px, 2px);
+  color: var(--highlight);
+}
+
+.action-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.summary {
+  margin: 0.9rem 0 0.7rem;
+  padding: 0.68rem 0;
+  max-width: 75ch;
+}
+
+.summary p {
+  margin: 0.4rem 0;
+}
+
+.section-block {
+  margin-top: 1.05rem;
+  padding: 0.8rem 0 0.2rem;
+}
+
+h2 {
+  margin: 0 0 0.52rem;
+  padding: 0;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--highlight);
+  font-family: "Geist Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  margin: 0 0 0.5rem;
+  padding-left: 0.9rem;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.39rem;
+  width: 0.32rem;
+  height: 0.32rem;
+  background: var(--highlight);
+}
+
+.muted {
+  font-size: 0.92em;
+  color: var(--muted);
+}
+
+.footer-note {
+  margin-top: 0.92rem;
+  display: inline-block;
+  padding: 0.2rem 0;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+@media (min-width: 860px) {
+  .hero {
+    grid-template-columns: 1.8fr 1fr;
+    align-items: start;
+    gap: 1.4rem;
+  }
+}
+
+@media screen {
+  .cv-shell {
+    padding-top: 3.2rem;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0.7in;
+}
+
+@media print {
+  body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 0.8rem;
+  }
+
+  .cv-shell {
+    max-width: none;
+    padding: 0.16in 0 0;
+  }
+
+  h1 {
+    font-size: 2.35rem;
+  }
+
+  .hero,
+  .summary,
+  .section-block {
+    break-inside: avoid;
+  }
+
+  .section-block.publications-section {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .version-bar {
+    display: none;
+  }
+
+  .link-grid a,
+  .version-tabs a,
+  .pdf-download {
+    box-shadow: none;
+    transform: none;
+  }
+
+  .pub-link {
+    background: none;
+    color: inherit;
+  }
+
+  .section-block {
+    margin-top: 0.82rem;
+    padding-top: 0.68rem;
+  }
+
+  li {
+    margin-bottom: 0.38rem;
+  }
+
+  .muted {
+    font-size: 0.92em;
+  }
+}

@@ -1,0 +1,17 @@
+---
+layout: layout.njk
+title: "Josh Siegle - CV"
+permalink: /complete/index.html
+cssPath: ../assets/styles.css
+version: complete
+highlightsPath: ../index.html
+completePath: index.html
+pdfPath: ../assets/complete.pdf
+pdfName: complete.pdf
+---
+{% from "section.njk" import renderSection %}
+{{ renderSection("Positions", cv.positions) }}
+{{ renderSection("Education", cv.education) }}
+{{ renderSection("Publications", cv.publications.complete) }}
+{{ renderSection("Awards & Fellowships", cv.awards.complete) }}
+{{ renderSection("Teaching Experience", cv.teaching.complete) }}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ cssPath or '/assets/styles.css' }}" />
+    <script>
+      (function () {
+        const key = "cv-theme";
+        const stored = localStorage.getItem(key);
+        if (stored === "light" || stored === "dark") {
+          document.documentElement.setAttribute("data-theme", stored);
+        } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="cv-shell">
+      <header class="hero">
+        <button id="theme-toggle" class="cv-badge-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">CV</button>
+        <div class="hero-band" aria-hidden="true"></div>
+        <div>
+          <h1>{{ cv.profile.name }}</h1>
+          <p class="hero-subtitle">{{ cv.profile.title }}</p>
+          <p class="hero-meta">{{ cv.profile.location }} · <a href="mailto:{{ cv.profile.email }}">{{ cv.profile.email }}</a></p>
+        </div>
+        <nav class="link-grid" aria-label="External links">
+          {% for link in cv.links %}
+          <a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
+          {% endfor %}
+        </nav>
+      </header>
+
+      <div class="version-bar">
+        <nav class="version-tabs" aria-label="CV versions">
+          <a href="{{ highlightsPath or '/' }}" class="{% if version == 'highlights' %}is-active{% endif %}">Highlights</a>
+          <a href="{{ completePath or '/complete/' }}" class="{% if version == 'complete' %}is-active{% endif %}">Complete</a>
+        </nav>
+        <div class="action-controls">
+          <a class="pdf-download" href="{{ pdfPath or 'assets/highlights.pdf' }}" download="{{ pdfName or 'highlights.pdf' }}">Download PDF</a>
+        </div>
+      </div>
+
+      <section class="summary">{{ cv.summaryHtml | safe }}</section>
+
+      {{ content | safe }}
+
+      <footer class="footer-note">last updated: {{ lastUpdated }}</footer>
+    </main>
+
+    <script>
+      (function () {
+        const key = "cv-theme";
+        const root = document.documentElement;
+        const button = document.getElementById("theme-toggle");
+        if (!button) return;
+
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+
+        function apply(theme) {
+          root.setAttribute("data-theme", theme);
+          localStorage.setItem(key, theme);
+          const isDark = theme === "dark";
+          button.setAttribute("aria-pressed", String(isDark));
+          button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+        }
+
+        apply(current);
+        button.addEventListener("click", function () {
+          const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          apply(next);
+        });
+      })();
+    </script>
+  </body>
+</html>
