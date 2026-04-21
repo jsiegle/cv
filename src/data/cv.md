@@ -81,7 +81,7 @@ publications:
     - citation: "Roszko DA, Chen FD, Straguzzi J, Wahn H […] **Siegle JH**, Poon JKS, Sacher WD (2025) “Foundry-fabricated dual-color nanophotonic neural probes for photostimulation and electrophysiological recording.” *Neurophotonics* **12**, 025002."
       url: https://doi.org/10.1117/1.NPh.12.2.025002
 
-    - citation: "Akella S, Ledochowitsch P, **Siegle JH** et al. “Deciphering neuronal variability across states reveals dynamic sensory encoding.” *Nature Communications* **16**, 1768."
+    - citation: "Akella S, Ledochowitsch P, **Siegle JH** et al. (2025) “Deciphering neuronal variability across states reveals dynamic sensory encoding.” *Nature Communications* **16**, 1768."
       url: https://doi.org/10.1038/s41467-025-56733-w
 
     - citation: "Bennett C, Ouellette B, Ramirez TK […] **Siegle JH**, Farrell C, Groblewski PA, Olsen SR (2024) “SHIELD: Skull-shaped hemispheric implants enabling large-scale electrophysiology datasets in the mouse brain.” *Neuron* **112**, 2869-2885.e8." 
@@ -194,8 +194,8 @@ teaching:
   highlights:
     - item: Neuropixels and OpenScope Workshop, Organizer (2019-2025)
     - item: MPFI Advanced Neurotechniques Course, Lecturer (2025)
-    - item: UCL Neuropixels Workshop, Lecturer (2023-2024)
-    - item: Paris Neuro Course, Lecturer (2022-2024)
+    - item: UCL Neuropixels Workshop, Lecturer (2023-2025)
+    - item: Paris Neuro Course, Lecturer (2022-2025)
     - item: Summer Workshop on the Dynamic Brain, Instructor (2023)
   complete:
     - item: Neuropixels and OpenScope Workshop, Organizer (2019-2025)
