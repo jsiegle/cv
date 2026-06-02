@@ -17,7 +17,7 @@ links:
     url: https://open-ephys.org/gui
 positions:
   - role: Senior Scientist
-    institution: Allen Institute for Neural Dynamics
+    institution: Allen Institute / Neural Dynamics
     dates: 2021-present
     details: Leader of the Electrophysiology Group
   - role: Assistant Investigator
@@ -38,8 +38,14 @@ education:
 publications:
   highlights:
 
-    - citation: "Lakunina A, Socha KZ, Ladd A, […] **Siegle JH**, Carandini M (2025) “Neuropixels Opto: Combining high-resolution electrophysiology and optogenetics” *bioRxiv*."
-      url: https://doi.org/10.1101/2025.02.04.636286
+    - citation: "Lakunina A, Socha KZ, Ladd A, […] **Siegle JH**, Carandini M (2026) “Neuropixels Opto: Combining high-resolution electrophysiology and optogenetics.” *Nature Methods*."
+      url: https://doi.org/10.1038/s41592-026-03076-z
+
+    - citation: "**Siegle JH** & Steinmetz NA (2026) “Large-scale electrophysiology at single-spike resolution.” *Nature Reviews Neuroscience* **27**, 395–415."
+      url: https://doi.org/10.1038/s41583-026-01042-4
+
+    - citation: "Buccino AP, Sridhar A, Feng D, Svoboda K, **Siegle JH** (2026) “Efficient and reproducible pipelines for spike sorting large-scale electrophysiology data” *eLife* **15**, RP110170."
+      url: https://doi.org/10.7554/eLife.110170.1
 
     - citation: "De Vries SEJ, **Siegle JH**, Koch C (2023) “Sharing neurophysiology data from the Allen Brain Observatory.” *eLife* **12**, e85550."
       url: https://doi.org/10.7554/eLife.85550
@@ -57,11 +63,15 @@ publications:
       url: https://doi.org/10.7554/eLife.03061
 
   complete:
+    
+    - citation: "Lakunina A, Socha KZ, Ladd A, […] **Siegle JH**, Carandini M (2026) “Neuropixels Opto: Combining high-resolution electrophysiology and optogenetics.” *Nature Methods*."
+      url: https://doi.org/10.1038/s41592-026-03076-z
+
+    - citation: "**Siegle JH** & Steinmetz NA (2026) “Large-scale electrophysiology at single-spike resolution.” *Nature Reviews Neuroscience* **27**, 395–415."
+      url: https://doi.org/10.1038/s41583-026-01042-4
+    
     - citation: "Buccino AP, Sridhar A, Feng D, Svoboda K, **Siegle JH** (2026) “Efficient and reproducible pipelines for spike sorting large-scale electrophysiology data” *eLife* **15**, RP110170."
       url: https://doi.org/10.7554/eLife.110170.1
-
-    - citation: "Lakunina A, Socha KZ, Ladd A, […] **Siegle JH**, Carandini M (2025) “Neuropixels Opto: Combining high-resolution electrophysiology and optogenetics” *bioRxiv*."
-      url: https://doi.org/10.1101/2025.02.04.636286
 
     - citation: "Newman JP, Zhang J, Cuevas-López A […] **Siegle JH**, Harnett MT, Wilson MA, Voigts J (2025) “ONIX: a unified open-source platform for multimodal neural recording and perturbation during naturalistic behavior.” *Nature Methods* **22**, 187-192."
       url: https://doi.org/10.1038/s41592-024-02521-1
@@ -195,13 +205,13 @@ teaching:
     - item: Neuropixels and OpenScope Workshop, Organizer (2019-2025)
     - item: MPFI Advanced Neurotechniques Course, Lecturer (2025)
     - item: UCL Neuropixels Workshop, Lecturer (2023-2025)
-    - item: Paris Neuro Course, Lecturer (2022-2025)
+    - item: Paris Neuro Course, Lecturer (2022-2026)
     - item: Summer Workshop on the Dynamic Brain, Instructor (2023)
   complete:
     - item: Neuropixels and OpenScope Workshop, Organizer (2019-2025)
     - item: MPFI Advanced Neurotechniques Course, Lecturer (2025)
-    - item: UCL Neuropixels Workshop, Lecturer (2023-2024)
-    - item: Paris Neuro Course, Lecturer (2022-2024)
+    - item: UCL Neuropixels Workshop, Lecturer (2023-2025)
+    - item: Paris Neuro Course, Lecturer (2022-2026)
     - item: Summer Workshop on the Dynamic Brain, Instructor (2023)
     - item: Karolinska Institute Brain Circuits Course, Instructor (2012, 2013, 2015)
     - item: Transylvanian Experimental Neuroscience Summer School, Teaching Assistant (2014, 2016)
