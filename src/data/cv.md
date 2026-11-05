@@ -16,9 +16,13 @@ links:
   - label: Open Ephys GUI
     url: https://open-ephys.org/gui
 positions:
+  - role: Principal Scientist
+    institution: Allen Institute / Neural Dynamics
+    dates: 2026-present
+    details: Leader of the Electrophysiology Group
   - role: Senior Scientist
     institution: Allen Institute / Neural Dynamics
-    dates: 2021-present
+    dates: 2021-2025
     details: Leader of the Electrophysiology Group
   - role: Assistant Investigator
     institution: Allen Institute MindScope Program
@@ -63,6 +67,12 @@ publications:
       url: https://doi.org/10.7554/eLife.03061
 
   complete:
+
+    - citation: "Su Z, Kosillo P, Jung K, […] **Siegle JH** […] Isogai Y, Chandrashekar (2026) “Topographic structure and function of locus coeruleus noradrenaline neurons.” *Nature*."
+      url: https://doi.org/10.1038/s41586-026-11026-0
+
+    - citation: "Laiton C, Lusk N, Browning Y, Summers MT […] **Siegle JH** […] Feng D, Seshamani S, Svoboda K (2026) “3D-MAESTRO: A scalable, modular, portable pipeline for automated processing of large-scale volumetric brain microscopy data.” *bioRxiv*."
+      url: https://doi.org/10.64898/2026.09.09.750494
     
     - citation: "Lakunina A, Socha KZ, Ladd A, […] **Siegle JH**, Carandini M (2026) “Neuropixels Opto: Combining high-resolution electrophysiology and optogenetics.” *Nature Methods*."
       url: https://doi.org/10.1038/s41592-026-03076-z
